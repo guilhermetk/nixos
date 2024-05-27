@@ -91,6 +91,8 @@ in
   };
   users.users.tisco.shell = pkgs.zsh;
 
+  fonts.fontDir.enable = true;
+
   # Install firefox.
   programs.zsh = {
     enable = true;
@@ -122,7 +124,9 @@ in
   environment.systemPackages = with pkgs; [
     unstable.alacritty
     atuin
+    btop
     curl
+    hyprpaper
     gcc
     gh
     git
@@ -130,10 +134,12 @@ in
     lazygit
     oh-my-zsh
     stow
+    tldr
     waybar
     wget
-    wofi
+    rofi-wayland
     zoxide
+    xclip
   ];
 
   environment.sessionVariables = {
